@@ -5,14 +5,14 @@
 </head>
 <body>
     <h1>Emotion Detector</h1>
-    <input type="text" id="textToAnalyse" placeholder="Enter text here">
+    <input type="text" id="textToAnalyze" placeholder="Enter text here">
     <button onclick="analyzeEmotion()">Analyze</button>
     <p id="result"></p>
 
     <script>
         function analyzeEmotion() {
-            let text = document.getElementById('textToAnalyse').value;
-            fetch('/emotionDetector?textToAnalyse=' + text)
+            let text = document.getElementById('textToAnalyze').value;
+            fetch('/emotionDetector?textToAnalyze=' + text)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('result').innerHTML = data;
